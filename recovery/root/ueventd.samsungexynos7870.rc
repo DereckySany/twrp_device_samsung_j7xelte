@@ -51,7 +51,7 @@
 /dev/video50              0660   media      graphics
 /dev/video51              0660   media      graphics
 /dev/m2m1shot_scaler0     0660   mediacodec drmrpc
-/dev/m2m1shot_scaler1     0660   media      graphics
+/dev/m2m1shot_scaler1     0660   mediacodec drmrpc
 
 /dev/video55              0666   system     graphics
 /dev/fimg2d               0666   system     graphics
@@ -59,10 +59,10 @@
 /dev/HPD                  0660   system     system
 
 # mfc
-/dev/video6               0660   mediacodec     mediadrm
-/dev/video7               0660   media      mediadrm
-/dev/video8               0660   media      mediadrm
-/dev/video9               0660   media      mediadrm
+/dev/video6               0660   mediacodec mediadrm
+/dev/video7               0660   mediacodec mediadrm
+/dev/video8               0660   mediacodec mediadrm
+/dev/video9               0660   mediacodec mediadrm
 
 # camera
 /dev/video100             0660   cameraserver   camera
@@ -87,10 +87,7 @@
 /dev/video151             0660   cameraserver   camera
 /dev/video152             0660   cameraserver   camera
 /dev/video160             0660   cameraserver   camera
-/dev/video161             0660   cameraserver   camera
-/dev/video170             0660   cameraserver   camera
-/dev/video180             0660   cameraserver   camera
-/dev/media2               0660   media          media
+/dev/media2               0660   media      media
 
 # hevc
 /dev/video10              0660   media      media
@@ -104,7 +101,7 @@
 
 # MobiCore
 #/dev/mobicore             0600   drmrpc     drmrpc
-#/dev/mobicore-user        0666   drm        drmrpc
+#/dev/mobicore-user        0660   drm        drmrpc
 
 # Secure MEM driver
 #/dev/s5p-smem             0660   drm        drmrpc
@@ -123,14 +120,12 @@
 /dev/umts_rfs0            0660   radio      radio
 
 # Modem Interface
-/dev/block/platform/13540000.dwmmc0/by-name/RADIO	    0660	system	radio
+/dev/block/platform/13540000.dwmmc0/by-name/RADIO	0660	system	radio
 /dev/block/platform/13540000.dwmmc0/by-name/CP_DEBUG	0660	radio	system
-/dev/umts*		          0660	 system	    radio
-/dev/umts_csd		      0660	 system	    loop_radio
-/dev/smd4                 0660   system     radio
-
-# SCSC Bluetooth
-/dev/scsc_h4_0            0660   bluetooth  bluetooth
+/dev/umts*		  0660	system	radio
+/dev/umts_csd		  0660	system	loop_radio
+/dev/smd4                 0660  system  radio
+/dev/umts_ciq0            0660   system     bridge_rw
 
 # interactive governor parameters
 /sys/devices/system/cpu/cpu*   cpufreq/interactive/timer_rate                  0660    system  system
@@ -151,23 +146,23 @@
 /sys/devices/virtual/input/input*    enable        0660    system    radio
 /dev/input/event*	  0660   system		input
 
+# Google FRP solution
+/dev/block/platform/13540000.dwmmc0/by-name/PERSISTENT    0660    system    system
+
+# Reactivation Lock
+/dev/block/platform/13540000.dwmmc0/by-name/STEADY    0660    system    system
+
+# Sensorhub IIO
+/dev/ssp_sensorhub        0660   system       system
+/dev/iio:device*          0660   system       system
+/sys/devices/13930000.spi/spi_master/spi2/spi2.0/iio:device*    buffer/enable       0660    system    system
+/sys/devices/13930000.spi/spi_master/spi2/spi2.0/iio:device*    buffer/length       0660    system    system
+/sys/bus/iio/devices/iio:device*    0664   system     radio
+
 # TEEGRIS
 /dev/tzdev		0660	system		system
 /dev/ionfd2phys		0660	system		radio
 /dev/tuihw		0660	system		system
 /dev/tzirs		0660	system		system
 /dev/tz_shmem_validator	0666    system		system
-/dev/tz_wormhole   	0666    system		system
-
-# Google FRP solution
-/dev/block/platform/13540000.dwmmc0/by-name/PERSISTENT    0660    system    system
-
-/dev/block/platform/13540000.dwmmc0/by-name/STEADY    0660    system    system
-
-# SCSC WLAN
-/dev/mx_0_r4_gdb   0660  system     system
-/dev/mx_0_m4_gdb   0660  system     system
-/dev/mx_0_mmap    0660   system     system
-/dev/mx_client_test_0     0660   system     system
-/dev/mx_0_debug_sampler   0660   system     system
-/dev/mx140_usb_clk_test_0 0660   system     system
+/dev/tz_wormhole        0666    system		system

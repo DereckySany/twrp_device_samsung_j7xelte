@@ -1,8 +1,2 @@
 [
-	{
-		"remote":"github",
-		"repository":"j72016/android_kernel_samsung_universl7870",
-		"target_path":"kernel/samsung/j7xelte",
-		"revision":"pie"
-	}
 ]

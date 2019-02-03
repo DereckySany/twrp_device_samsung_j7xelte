@@ -16,12 +16,6 @@ TARGET_CPU_ABI2 :=
 TARGET_CPU_VARIANT := cortex-a53
 TARGET_CPU_SMP := true
 
-TARGET_2ND_ARCH := arm
-TARGET_2ND_ARCH_VARIANT := armv7-a-neon
-TARGET_2ND_CPU_ABI := armeabi-v7a
-TARGET_2ND_CPU_ABI2 := armeabi
-TARGET_2ND_CPU_VARIANT := cortex-a53
-
 # Kernel
 
 TARGET_KERNEL_ARCH := arm64
@@ -31,7 +25,7 @@ TARGET_USES_UNCOMPRESSED_KERNEL := true
 TARGET_PREBUILT_KERNEL := device/samsung/j7xelte/kernel
 TARGET_PREBUILT_DTB := device/samsung/j7xelte/dt.img
 
-# Boot image 
+# Boot image
 
 BOARD_CUSTOM_BOOTIMG_MK :=  device/samsung/j7xelte/bootimg.mk
 BOARD_KERNEL_IMAGE_NAME := kernel
@@ -76,9 +70,3 @@ TW_MTP_DEVICE := "/dev/mtp_usb"
 
 # Encryption support
 TW_INCLUDE_CRYPTO := true
-
-# Init properties from bootloader version, ex. model info
-TARGET_UNIFIED_DEVICE := true
-TARGET_INIT_VENDOR_LIB := libinit_j7xelte
-TARGET_RECOVERY_DEVICE_MODULES := libinit_j7xelte
-TARGET_LIBINIT_DEFINES_FILE := device/samsung/j7xelte/init/init_j7xelte.cpp

@@ -1,7 +1,10 @@
-# Platform
+# Bootloader 
 
 TARGET_NO_BOOTLOADER := true
 TARGET_BOOTLOADER_BOARD_NAME := universal7870
+
+# Platform
+
 TARGET_BOARD_PLATFORM := exynos5
 TARGET_BOARD_PLATFORM_GPU := mali-t830mp2
 
@@ -11,6 +14,7 @@ TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
 TARGET_CPU_VARIANT := cortex-a53
+TARGET_CPU_SMP := true
 
 TARGET_2ND_ARCH := arm
 TARGET_2ND_ARCH_VARIANT := armv7-a-neon
@@ -26,19 +30,16 @@ TARGET_USES_UNCOMPRESSED_KERNEL := true
 
 TARGET_PREBUILT_KERNEL := device/samsung/j7xelte/kernel
 TARGET_PREBUILT_DTB := device/samsung/j7xelte/dt.img
-TARGET_KERNEL_CONFIG := lineage_j7xelte_defconfig
-TARGET_KERNEL_SOURCE := kernel/samsung/j7xelte
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
-KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin
 
-# Boot image
+# Boot image 
 
 BOARD_CUSTOM_BOOTIMG_MK :=  device/samsung/j7xelte/bootimg.mk
 BOARD_KERNEL_IMAGE_NAME := kernel
 BOARD_KERNEL_SEPARATED_DT := true
-BOARD_KERNEL_CMDLINE :=
+BOARD_KERNEL_CMDLINE := # Exynos doesn't take cmdline arguments from boot image
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
+# 000RU = recovery kernel, 000KU = system kernel
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --board SRPPE16A000KU
 
 # Partitions
@@ -49,6 +50,8 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 11784192000
 BOARD_CACHEIMAGE_PARTITION_SIZE    := 209715200
 BOARD_FLASH_BLOCK_SIZE := 4096
 
+
+# File System
 # Use this flag if the board has a ext4 partition larger than 2gb
 BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_USERIMAGES_USE_EXT4 := true

@@ -1,1 +1,1 @@
-## TWRP device tree for Samsung Galaxy J7 (2016)
+## TWRP device tree for Samsung Galaxy J7 2016

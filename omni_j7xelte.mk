@@ -7,6 +7,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/omni/config/common.mk)
 
+PRODUCT_COPY_FILES += \
+     device/samsung/j7xelte/dt.img:dt.img
+
+PRODUCT_COPY_FILES += \
+     device/samsung/j7xelte/boot.img:boot.img
+
 PRODUCT_PACKAGES += \
 	charger_res_images \
 	charger
@@ -16,3 +22,4 @@ PRODUCT_NAME := omni_j7xelte
 PRODUCT_DEVICE := j7xelte
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
+PRODUCT_MODEL := SM-J710F

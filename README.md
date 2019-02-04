@@ -13,7 +13,7 @@ Then add to `.repo/local_manifests/roomservice.xml`:
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
- <project name="j72016/twrp_device_samsung_j7xelte" path="device/samsung/j7xelte" remote="github" revision="android-8.1" />
+ <project name="j72016/twrp_device_samsung_j7xelte" path="device/samsung/j7xelte" remote="github" revision="android-9.0" />
 </manifest>
 ```
 Then to sync up:

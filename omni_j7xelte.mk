@@ -12,6 +12,7 @@ $(call inherit-product, vendor/omni/config/common.mk)
 PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/kernel:kernel \
      $(LOCAL_PATH)/dt.img:dt.img \
+     $(LOCAL_PATH)/boot.img:boot.img \
 
 PRODUCT_PACKAGES += \
 	charger_res_images \

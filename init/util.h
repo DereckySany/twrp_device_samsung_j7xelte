@@ -17,18 +17,10 @@
 #ifndef _INIT_UTIL_H_
 #define _INIT_UTIL_H_
 
-#include <sys/stat.h>
-#include <sys/types.h>
-
 #include <chrono>
 #include <functional>
 #include <ostream>
 #include <string>
-
-#include <android-base/chrono_utils.h>
-#include <selinux/label.h>
-
-#include "result.h"
 
 #define COLDBOOT_DONE "/dev/.coldboot_done"
 

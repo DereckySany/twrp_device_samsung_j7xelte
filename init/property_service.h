@@ -17,8 +17,6 @@
 #ifndef _INIT_PROPERTY_H
 #define _INIT_PROPERTY_H
 
-#include <sys/socket.h>
-
 #include <string>
 
 #include "epoll.h"

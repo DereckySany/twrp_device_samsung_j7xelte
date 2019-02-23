@@ -23,5 +23,4 @@ PRODUCT_NAME := omni_j7xelte
 PRODUCT_DEVICE := j7xelte
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
-## Don't use the model but instead of libinit i type the device name
-PRODUCT_MODEL= Samsung Galaxy J7 (2016)
+PRODUCT_MODEL= SM-J710

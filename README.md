@@ -1,15 +1,10 @@
 ## TWRP device tree for Samsung Galaxy J7 (2016)
 
-Initialise repo:
-
-repo init --depth=1 -u git://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-8.1
-
+Initialise source:
 ```xml
-mkdir .repo/local_manifests/
-nano .repo/local_manifests/roomservice.xml
+mkdir twrp && cd twrp && repo init --depth=1 -u git://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-8.1 && mkdir .repo/local_manifests/ && nano .repo/local_manifests/roomservice.xml
 ```
-Then add to `.repo/local_manifests/roomservice.xml`:
-
+And add to roomservice.xml
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
@@ -17,16 +12,12 @@ Then add to `.repo/local_manifests/roomservice.xml`:
 </manifest>
 ```
 Then to sync up:
-
-repo sync
-
+```xml
+repo sync --force-sync --no-clone-bundle --optimized-fetch --prune --no-tags -j4
+```
 Build:
 ```xml
-. build/envsetup.sh
-export ALLOW_MISSING_DEPENDENCIES=true
-lunch omni_j7xelte-eng
-mka recoveryimage
+. build/envsetup.sh && export ALLOW_MISSING_DEPENDENCIES=true && lunch omni_j7xelte-eng && mka recoveryimage
 ```
-
 Done, happy flashing! :)
 

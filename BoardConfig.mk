@@ -8,6 +8,9 @@ TARGET_BOARD_PLATFORM := exynos5
 TARGET_BOARD_SOC := exynos7870
 TARGET_BOARD_PLATFORM_GPU := mali-t830mp2
 
+# Break the rules
+BUILD_BROKEN_DUP_RULES := true
+
 # Architecture
 
 # 64bit
@@ -16,6 +19,13 @@ TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
 TARGET_CPU_VARIANT := cortex-a53
+
+# 32bit
+TARGET_2ND_ARCH := arm
+TARGET_2ND_ARCH_VARIANT := armv8-a
+TARGET_2ND_CPU_ABI := armeabi-v7a
+TARGET_2ND_CPU_ABI2 := armeabi
+TARGET_2ND_CPU_VARIANT := cortex-a53
 
 # Needed for both
 TARGET_CPU_CORTEX_A53 := true

@@ -1,6 +1,7 @@
 # Bootloader
 TARGET_NO_BOOTLOADER := true
 TARGET_BOOTLOADER_BOARD_NAME := universal7870
+TARGET_NO_RADIOIMAGE := true
 
 # Platform
 BOARD_VENDOR := samsung

@@ -73,9 +73,15 @@ TW_NO_REBOOT_BOOTLOADER := true
 TW_HAS_DOWNLOAD_MODE := true
 TW_INCLUDE_NTFS_3G := true
 TW_EXCLUDE_SUPERSU := true
+TW_EXCLUDE_TWRPAPP := true
+TW_DEVICE_VERSION := $(shell date -u +"%Y%m%d")
 TW_USE_NEW_MINADBD := true
 TW_EXTRA_LANGUAGES := true
 TW_MTP_DEVICE := "/dev/mtp_usb"
+
+# Resolution
+TARGET_SCREEN_WIDTH := 720
+TARGET_SCREEN_HEIGHT := 1280
 
 # Encryption support
 TW_INCLUDE_CRYPTO := true

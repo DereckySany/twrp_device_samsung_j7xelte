@@ -77,6 +77,7 @@ TW_EXCLUDE_TWRPAPP := true
 TW_DEVICE_VERSION := $(shell date -u +"%Y%m%d")
 TW_USE_NEW_MINADBD := true
 TW_EXTRA_LANGUAGES := true
+TW_INCLUDE_FBE := true
 TW_MTP_DEVICE := "/dev/mtp_usb"
 
 # Resolution

@@ -1,18 +1,14 @@
-# Bootloader
-TARGET_NO_BOOTLOADER := true
-TARGET_BOOTLOADER_BOARD_NAME := universal7870
-TARGET_NO_RADIOIMAGE := true
-
 # Platform
 BOARD_VENDOR := samsung
 TARGET_BOARD_PLATFORM := exynos5
+TARGET_BOOTLOADER_BOARD_NAME := universal7870
 TARGET_BOARD_SOC := exynos7870
 TARGET_BOARD_PLATFORM_GPU := mali-t830mp2
+TARGET_NO_BOOTLOADER := true
+TARGET_NO_RADIOIMAGE := true
 
 # Break the rules
 BUILD_BROKEN_DUP_RULES := true
-
-# Architecture
 
 # 64bit
 TARGET_ARCH := arm64
